@@ -9,7 +9,7 @@ app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
 });
 
-app.get('/about-lunareclipse', function (req, res) {
+app.get('/ui/about-lunareclipse', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui','about-lunareclipse.html'));
 });
 
