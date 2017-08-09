@@ -5,6 +5,63 @@ var path = require('path');
 var app = express();
 app.use(morgan('combined'));
 
+
+var lunar={
+    
+    heading:'lunar eclipse',
+    link:'home',
+    content:"<p> Lunar eclipses occur when Earth's shadow blocks the sun's light, which otherwise reflects off the moon. There are three types — total, partial and penumbral — with the most dramatic being a total lunar eclipse, in which Earth's shadow completely covers the moon.</p>"
+    
+    
+};
+var htmltemplate=`
+<!DOCTYPE html>
+<head>
+    <title>${heading}</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    
+       
+         <link href="/ui/style.css" rel="stylesheet" />
+
+</head>
+
+
+
+<body>
+    <div class="contains">
+        <div>
+        <a href='/'>${link}</a>
+        <br>
+        <hr/>
+    </div>
+    
+        
+    ${content}
+        
+    
+   
+    
+    </div>
+    
+    
+</body>
+</html>
+ `;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
 });
