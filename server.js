@@ -7,7 +7,7 @@ app.use(morgan('combined'));
 
 
 var eclipse={
-'about-lunareclipse':{
+'lunareclipse':{
     
     heading:'lunar eclipse',
     link:'home',
@@ -15,7 +15,7 @@ var eclipse={
     
     
 },
-'about-solareclipse':{heading:'solar eclipse',
+'solareclipse':{heading:'solar eclipse',
     link:'home',
     content:`<p> A solar eclipse is a type of eclipse that occurs when the Moon passes between the Sun and Earth, and when the Moon fully or partially blocks ("occults") the Sun</p>`
     }
