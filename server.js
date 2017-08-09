@@ -35,7 +35,7 @@ var eclipse={
 <head>
     <title>${heading}</title>
     <meta name="viewport" content="width=device-width,initial-scale=1"/>
-    
+
        
          <link href="/ui/style.css" rel="stylesheet" />
 
@@ -83,9 +83,9 @@ app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
 });
 
-app.get('/:abouteclipse', function (req, res) {
-    var abouteclipse=req.params.abouteclipse;
-  res.send(createtemplate(eclipse[abouteclipse]));
+app.get('/:aboutName', function (req, res) {
+    var aboutName=req.params.aboutName;
+  res.send(createtemplate(eclipse[aboutName]));
 });
 app.get('/about-solareclipse', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'about-solareclipse.html'));
