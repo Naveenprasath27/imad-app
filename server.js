@@ -51,9 +51,10 @@ var eclipse={
         <a href='/'>${link}</a>
         <br>
         <hr/>
+        </div>
         <h1>${heading}</h1>
         <br>
-    </div>
+    
     
         
     ${content}
