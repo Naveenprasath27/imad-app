@@ -15,7 +15,8 @@ var eclipse={
     
     
 },
-'about-solareclipse':{heading:'solar eclipse',
+'about-solareclipse':{
+    heading:'solar eclipse',
     link:'home',
     content:`<p> A solar eclipse is a type of eclipse that occurs when the Moon passes between the Sun and Earth, and when the Moon fully or partially blocks ("occults") the Sun</p>`
     }
@@ -24,8 +25,9 @@ var eclipse={
  function createtemplate (data){
  
  var content=data.content;
- var heading=data.heading;
+ var title=data.title;
  var link=data.link;
+ var heading=data.heading;
  
  
  
@@ -33,7 +35,7 @@ var eclipse={
  var htmltemplate=`
 <!DOCTYPE html>
 <head>
-    <title>${heading}</title>
+    <title>${title}</title>
     <meta name="viewport" content="width=device-width,initial-scale=1"/>
 
        
@@ -49,6 +51,8 @@ var eclipse={
         <a href='/'>${link}</a>
         <br>
         <hr/>
+        <h1>${heading}</h1>
+        <br>
     </div>
     
         
