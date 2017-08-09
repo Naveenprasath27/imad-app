@@ -17,7 +17,7 @@ var lunar={
  function createtemplate (data){
  
  var content=data.content;
- var heading=daa.heading;
+ var heading=data.heading;
  var link=data.link;
  
  
