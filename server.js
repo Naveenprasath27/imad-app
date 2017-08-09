@@ -17,7 +17,7 @@ var eclipse={
 },
 'about-solareclipse':{heading:'solar eclipse',
     link:'home',
-    content:"<p> A solar eclipse is a type of eclipse that occurs when the Moon passes between the Sun and Earth, and when the Moon fully or partially blocks ("occults") the Sun</p>"
+    content:`<p> A solar eclipse is a type of eclipse that occurs when the Moon passes between the Sun and Earth, and when the Moon fully or partially blocks ("occults") the Sun</p>`
     }
     
 };
@@ -84,7 +84,7 @@ app.get('/', function (req, res) {
 });
 
 app.get('/abouteclipse', function (req, res) {
-    var abouteclipse=req.params.abouteclipse
+    var abouteclipse=req.params.abouteclipse;
   res.send(createtemplate(eclipse[abouteclipse]));
 });
 app.get('/about-solareclipse', function (req, res) {
