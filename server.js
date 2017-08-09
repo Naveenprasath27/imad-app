@@ -14,7 +14,16 @@ var lunar={
     
     
 };
-var htmltemplate=`
+ function createtemplate (data){
+ 
+ var content=data.content;
+ var heading=daa.heading;
+ var link=data.link;
+ 
+ 
+ 
+ 
+ var htmltemplate=`
 <!DOCTYPE html>
 <head>
     <title>${heading}</title>
@@ -47,7 +56,8 @@ var htmltemplate=`
 </body>
 </html>
  `;
-
+ return htmltemplate;
+}
 
 
 
@@ -67,7 +77,7 @@ app.get('/', function (req, res) {
 });
 
 app.get('/about-lunareclipse', function (req, res) {
-  res.sendFile(path.join(__dirname, 'ui', 'about-lunareclipse.html'));
+  res.send(createtemplate(lunar));
 });
 app.get('/about-solareclipse', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'about-solareclipse.html'));
