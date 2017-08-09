@@ -6,12 +6,19 @@ var app = express();
 app.use(morgan('combined'));
 
 
-var lunar={
+var eclipse={
+'about-lunareclipse':{
     
     heading:'lunar eclipse',
     link:'home',
     content:"<p> Lunar eclipses occur when Earth's shadow blocks the sun's light, which otherwise reflects off the moon. There are three types — total, partial and penumbral — with the most dramatic being a total lunar eclipse, in which Earth's shadow completely covers the moon.</p>"
     
+    
+},
+'about-solareclipse':{heading:'solar eclipse',
+    link:'home',
+    content:"<p> A solar eclipse is a type of eclipse that occurs when the Moon passes between the Sun and Earth, and when the Moon fully or partially blocks ("occults") the Sun</p>"
+    }
     
 };
  function createtemplate (data){
@@ -76,8 +83,9 @@ app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
 });
 
-app.get('/about-lunareclipse', function (req, res) {
-  res.send(createtemplate(lunar));
+app.get('/abouteclipse', function (req, res) {
+    var abouteclipse=req.params.abouteclipse
+  res.send(createtemplate(eclipse[abouteclipse]));
 });
 app.get('/about-solareclipse', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'about-solareclipse.html'));
