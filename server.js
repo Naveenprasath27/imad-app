@@ -83,7 +83,7 @@ app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
 });
 
-app.get('/abouteclipse', function (req, res) {
+app.get('/:abouteclipse', function (req, res) {
     var abouteclipse=req.params.abouteclipse;
   res.send(createtemplate(eclipse[abouteclipse]));
 });
