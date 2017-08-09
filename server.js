@@ -12,6 +12,9 @@ app.get('/', function (req, res) {
 app.get('/about-lunareclipse', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'about-lunareclipse.html'));
 });
+app.get('/about-solareclipse', function (req, res) {
+  res.sendFile(path.join(__dirname, 'ui', 'about-solareclipse.html'));
+});
 
 app.get('/ui/style.css', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'style.css'));
