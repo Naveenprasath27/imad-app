@@ -7,7 +7,7 @@ app.use(morgan('combined'));
 
 
 var eclipse={
-'lunareclipse':{
+'lunar-eclipse':{
     
     heading:'lunar eclipse',
     link:'home',
@@ -15,7 +15,7 @@ var eclipse={
     
     
 },
-'solareclipse':{heading:'solar eclipse',
+'solar-eclipse':{heading:'solar eclipse',
     link:'home',
     content:`<p> A solar eclipse is a type of eclipse that occurs when the Moon passes between the Sun and Earth, and when the Moon fully or partially blocks ("occults") the Sun</p>`
     }
@@ -83,9 +83,9 @@ app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
 });
 
-app.get('/:aboutName', function (req, res) {
-    var aboutName=req.params.aboutName;
-  res.send(createtemplate(eclipse[aboutName]));
+app.get('/:Name-eclipse', function (req, res) {
+    var Name-eclipse=req.params.Name-eclipse;
+  res.send(createtemplate(eclipse[Name-eclipse]));
 });
 app.get('/about-solareclipse', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'about-solareclipse.html'));
