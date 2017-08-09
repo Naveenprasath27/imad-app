@@ -83,9 +83,9 @@ app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
 });
 
-app.get('/:nameeclipse', function (req, res) {
-    var nameeclipse=req.params.nameeclipse;
-  res.send(createtemplate(eclipse[nameeclipse]));
+app.get('/:Nameeclipse', function (req, res) {
+    var Nameeclipse=req.params.Nameeclipse;
+  res.send(createtemplate(eclipse[Nameeclipse]));
 });
 app.get('/about-solareclipse', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'about-solareclipse.html'));
