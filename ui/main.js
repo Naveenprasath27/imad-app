@@ -3,11 +3,11 @@ var element=document.getElementById('contents');
 
 element.innerHTML='Changed element';
 var img=document.getElementById('dino');
-var marginLeft=0;
+var marginleft=0;
 function moveRight(){
     
-    marginLeft=marginLeft+10;
-    img.style.marginLeft=marginLeft+'px';
+    marginleft=marginLeft+10;
+    img.style.marginleft=marginleft+'px';
 }
 
 img.onclick=function() {
