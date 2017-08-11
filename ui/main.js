@@ -3,7 +3,7 @@ var element=document.getElementById('contents');
 
 element.innerHTML='Changed element';
 var img=document.getElementById('dino');
-var marginleft=0;
+var marginLeft=0;
 function moveRight(){
     
     marginLeft=marginLeft+10;
