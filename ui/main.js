@@ -4,7 +4,7 @@ var element=document.getElementById('contents');
 element.innerHTML='Changed element';
 var img=document.getElementById('dino');
 var marginLeft=0;
-function moveRight(){
+function moveright(){
     
     marginLeft=marginLeft+10;
     img.style.marginLeft=marginLeft+'px';
@@ -12,4 +12,4 @@ function moveRight(){
 
 img.onclick=function() {
 
-var interval=setInterval(moveRight,100);}
+var interval=setInterval(moveright,100);}
