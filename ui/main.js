@@ -6,8 +6,8 @@ var img=document.getElementById('dino');
 var marginleft=0;
 function moveRight(){
     
-    marginleft=marginleft+10;
-    img.style.marginleft=marginleft+'px';
+    marginLeft=marginLeft+10;
+    img.style.marginLeft=marginLeft+'px';
 }
 
 img.onclick=function() {
