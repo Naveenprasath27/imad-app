@@ -6,7 +6,7 @@ var img=document.getElementById('dino');
 var marginleft=0;
 function moveRight(){
     
-    marginleft=marginLeft+10;
+    marginleft=marginleft+10;
     img.style.marginleft=marginleft+'px';
 }
 
